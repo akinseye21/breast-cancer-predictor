@@ -72,7 +72,7 @@ try:
     model, FEATURES, MODEL_NAME = load_model()
     REF = load_reference(tuple(FEATURES))
 except FileNotFoundError as e:
-    st.error(f"Missing file: {e.filename}. Put it in the same folder as app.py and rerun.")
+    st.error(f"Missing file: {e.filename}. Put it in the same folder as main.py and rerun.")
     st.stop()
 
 # Initialise each input with the dataset median the first time the app loads
