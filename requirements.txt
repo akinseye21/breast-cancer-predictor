@@ -1,0 +1,23 @@
+# ============================================================
+# Breast Cancer Predictor: Python dependencies
+# Tested with Python 3.12 (set PYTHON_VERSION=3.12.7 on Render)
+# ============================================================
+ 
+# --- Web app -------------------------------------------------
+streamlit>=1.40,<2
+ 
+# --- Machine learning ----------------------------------------
+# EXACT pin: a saved .joblib model only loads reliably with the
+# same scikit-learn version that created it. The included model
+# was built with 1.8.0. If you retrain the notebook yourself, run
+# `pip show scikit-learn` and put YOUR version here instead.
+scikit-learn==1.8.0
+joblib>=1.4,<2
+ 
+# --- Data handling -------------------------------------------
+# pandas is kept below 3.0 for compatibility with Streamlit.
+pandas>=2.2,<3
+numpy>=1.26,<3
+ 
+# --- Plotting ------------------------------------------------
+matplotlib>=3.8,<4
